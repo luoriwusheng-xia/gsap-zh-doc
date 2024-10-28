@@ -26,6 +26,9 @@ jobs:
       - name: Build VitePress
         run: pnpm run docs:build # 确保 package.json 中有 "docs:build" 脚本，通常为 "vitepress build docs"
 
+      - name: list repo
+        run: ls -la
+
       - name: List files
         run: ls -la ./.vitepress/dist # 增加调试命令，查看是否生成了 dist文件
 
@@ -44,4 +47,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # 默认是推送到这个分支，也就是要在 github的仓库上提前创建好这个分支； 不能写master，因为会存在冲突
           # publish_branch: gh-pages
-          publish_dir: ./.vitepress/dist
+          publish_dir: ../../.vitepress/dist
