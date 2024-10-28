@@ -8,6 +8,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4 # https://github.com/marketplace/actions/checkout
@@ -31,15 +33,8 @@ jobs:
 
       - name: List files
         run: ls -la ./dist # 增加调试命令，查看是否生成了 dist文件
-
-      - name: Check if dist directory exists # 检查内容是否存在
-        run: |
-          if [ -d ./dist ]; then
-            echo "文件存在"
-          else
-            echo "不存在......"
-            exit 1  # 如果目录不存在，失败此步骤
-          fi
+      - name: pwd
+        run: pwd
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4 # https://github.com/marketplace/actions/github-pages-action
