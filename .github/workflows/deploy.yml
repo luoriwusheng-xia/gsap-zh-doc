@@ -30,11 +30,11 @@ jobs:
         run: ls -la
 
       - name: List files
-        run: ls -la ./.vitepress/dist # 增加调试命令，查看是否生成了 dist文件
+        run: ls -la ./dist # 增加调试命令，查看是否生成了 dist文件
 
       - name: Check if dist directory exists # 检查内容是否存在
         run: |
-          if [ -d ./.vitepress/dist ]; then
+          if [ -d ./dist ]; then
             echo "文件存在"
           else
             echo "不存在......"
