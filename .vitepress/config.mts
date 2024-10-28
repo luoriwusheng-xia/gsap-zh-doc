@@ -6,6 +6,8 @@ import { fileURLToPath } from 'node:url'
 export default defineConfig({
   title: 'gsap zh doc',
   description: 'test',
+  // 在 github page中，一定要添加这个，否则静态目录路径都是错的，都是相对于根目录
+  base: '/gsap-zh-doc',
   vite: {
     server: {
       host: true
