@@ -42,5 +42,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4 # https://github.com/marketplace/actions/github-pages-action
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: master
+          # 默认是推送到这个分支，也就是要在 github的仓库上提前创建好这个分支； 不能写master，因为会存在冲突
+          # publish_branch: gh-pages
           publish_dir: ./.vitepress/dist
