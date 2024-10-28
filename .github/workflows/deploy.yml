@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4 # https://github.com/marketplace/actions/checkout
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v4 # https://github.com/marketplace/actions/setup-node-js-environment
         with:
           node-version: '22.10.0' # 选择与项目兼容的 Node 版本
 
@@ -26,11 +26,19 @@ jobs:
       - name: Build VitePress
         run: pnpm run docs:build # 确保 package.json 中有 "docs:build" 脚本，通常为 "vitepress build docs"
 
+      # 打印现在的地址
+      - name: print current dir-1
+        run: pwd
+
       - name: List files
         run: ls -la ./.vitepress/dist # 增加调试命令，查看是否生成了 dist文件
 
+      # 打印现在的地址
+      - name: print current dir-2
+        run: pwd
+
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4 # https://github.com/marketplace/actions/github-pages-action
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./.vitepress/dist
