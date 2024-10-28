@@ -31,11 +31,42 @@ export default defineConfig({
     ],
 
     sidebar: [
+      // {
+      //   text: 'Examples',
+      //   items: [
+      //     { text: 'Markdown Examples', link: '/markdown-examples' },
+      //     { text: 'Runtime API Examples', link: '/api-examples' }
+      //   ]
+      // },
       {
-        text: 'Examples',
+        text: '快速开始',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          {
+            text: '安装',
+            link: 'docs/docs/installation/index'
+          }
+        ]
+      },
+      {
+        text: '入门使用',
+        items: [
+          {
+            text: '你的第一动画',
+            link: 'docs/docs/getting-started/index'
+          }
+        ]
+      },
+      {
+        text: '插件',
+        items: [
+          {
+            text: '什么是插件?',
+            link: 'docs/docs/plugins'
+          },
+          {
+            text: 'ScrollTrigger 提示和常见错误',
+            link: 'docs/docs/plugins/scrollTrigger'
+          }
         ]
       }
     ],
