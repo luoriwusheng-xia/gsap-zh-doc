@@ -26,6 +26,9 @@ jobs:
       - name: Build VitePress
         run: pnpm run docs:build # 确保 package.json 中有 "docs:build" 脚本，通常为 "vitepress build docs"
 
+      - name: List files
+        run: ls -la ./.vitepress/dist # 增加调试命令，查看是否生成了 dist文件
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
