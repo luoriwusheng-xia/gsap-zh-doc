@@ -42,4 +42,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4 # https://github.com/marketplace/actions/github-pages-action
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: master
           publish_dir: ./.vitepress/dist
