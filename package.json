@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
@@ -15,5 +16,8 @@
     "@types/node": "^22.8.1",
     "prettier": "^3.3.3",
     "vitepress": "^1.4.1"
+  },
+  "dependencies": {
+    "html-to-md": "^0.8.6"
   }
 }

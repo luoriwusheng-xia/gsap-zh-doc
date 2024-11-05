@@ -27,6 +27,10 @@ export default defineConfig({
       {
         text: '文档',
         link: '/docs/docs/index'
+      },
+      {
+        text: '示例',
+        link: 'docs/demos/index'
       }
     ],
 
@@ -53,6 +57,29 @@ export default defineConfig({
           {
             text: '你的第一动画',
             link: 'docs/docs/getting-started/index'
+          }
+        ]
+      },
+      {
+        text: '原理',
+        items: [
+          {
+            text: 'GSAP',
+            link: 'docs/docs/fundamentals/index',
+            items: [
+              {
+                text: 'properties 属性',
+                link: 'docs/docs/fundamentals/properties'
+              },
+              {
+                text: 'methods 方法',
+                link: 'docs/docs/fundamentals/methods'
+              },
+              {
+                text: 'Internal Plugins 内部插件',
+                link: 'docs/docs/fundamentals/internal-plugins'
+              }
+            ]
           }
         ]
       },
