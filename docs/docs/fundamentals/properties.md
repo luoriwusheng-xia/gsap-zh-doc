@@ -2,7 +2,7 @@
 
 ### 类型：对象
 
-一旦一个效果已经被[注册](<(/docs/v3/GSAP/gsap.registerEffect())>)，你可以像这样在`gsap.effects`对象上直接访问它：
+一旦一个效果已经被`注册`，你可以像这样在`gsap.effects`对象上直接访问它：
 
 ```javascript
 // 假设一个名为“explode”的效果已经被注册
